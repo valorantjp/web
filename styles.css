@@ -1,0 +1,105 @@
+/* ▼ カラーテーマ（青 × 緑） */
+:root {
+  --accent-blue: #00c8ff;
+  --accent-green: #00ff85;
+  --dark-bg: #0a0f14;
+}
+
+/* 全体 */
+body {
+  margin: 0;
+  font-family: "Roboto", "Noto Sans JP", sans-serif;
+  background: var(--dark-bg);
+  color: #fff;
+}
+
+/* ▼ ナビバー（Valorant風） */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  padding: 0 40px;
+  background: rgba(10, 15, 20, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  z-index: 5;
+}
+
+.nav .logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  letter-spacing: 0.08em;
+}
+
+.nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #cfd9e0;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  color: var(--accent-green);
+}
+
+/* ▼ ヒーロー */
+.hero {
+  position: relative;
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* ▼ ボタン（Valorant赤 → 緑青版） */
+.cta-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 0.8rem 2.4rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
+  border-radius: 8px;
+  text-decoration: none;
+  color: #000;
+  transition: 0.2s ease-out;
+}
+
+.cta-btn:hover {
+  opacity: 0.8;
+}
